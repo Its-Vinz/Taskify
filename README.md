@@ -13,6 +13,21 @@ A sleek, developer-first command-line task manager built for speed, clarity, and
 
 <br/>
 
+## 🛠️ Tech Stack
+| Category 	    | Technologies Used                                           |
+|-----------------|-----------------------------------------------------------|
+|  Language	      |  Python                                                   |
+|  Database	      |  SQLite3                                                  |
+|  Libraries	    |  argparse, sqlite3, bcrypt, fpdf, python-dotenv           |
+|  Task Export	  |  CSV, PDF                                                 |
+|  OS Tools	      |  Linux Cron (for auto-reminders)                          | 
+|  Shell	        |  Bash (for custom launcher)                               |
+|  Auth Security	|  Hashed passwords using bcrypt                            |
+|  Notifications	|  Built-in CLI notifier                                    |
+|  Environment	  |  .env for secure DB config                                |
+
+<br/>
+
 ## Full Documentation
 For complete setup, command-line usage, automation tips, and more —  
 Check out the [Documentation](docs/documentation.md)
