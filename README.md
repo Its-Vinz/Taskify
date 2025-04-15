@@ -1,20 +1,18 @@
-# TaskProCLI
+# Taskify
 
-A minimal, fast, and elegant command-line task manager built with Python. Designed for developers who prefer terminal productivity, with support for reminders, priority tagging, and deadline notifications.
+A sleek, developer-first command-line task manager built for speed, clarity, and productivity — right inside your terminal.
 
 ## Features
+- ✅ Add, delete, update, and filter tasks
+- 🔐 User authentication & sessions
+- 🔔 Smart reminders via CLI/desktop
+- 📦 MySQL persistence
+- ✨ Beautifully styled terminal UI
 
-- Create, update, delete, and display tasks
-- Organize by title, date, status, or priority
-- Real-time system clock with reminders
-- Daily due-date notifications using system popups
-- SQLite3 integration
-- Styled terminal output for better readability
+## Full Documentation
+For complete setup, command-line usage, automation tips, and more —  
+Check out the [Documentation](docs/documentation.md)
 
-## Setup
+---
 
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/your-username/taskprocli.git
-   cd taskprocli
-
+**Made with precision, caffeine, and ❤️ by Vinz**
