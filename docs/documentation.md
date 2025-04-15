@@ -1,27 +1,12 @@
-#  Taskify
+# Taskify : Get Started
 
-A powerful, lightweight, and developer-focused **command-line task manager** built in Python for busy developers and CLI Lovers.  
-Designed for speed, clarity, and productivity — right from your terminal.
+**A complete developer reference for `Taskify`, your terminal-powered task manager.**
 
-
-<br/>
-
-
-##  Features at a Glance
-
-- ✅ **Add, update, delete, and list** tasks with ease
-- 🗂️ Filter by **priority, status, date, or title**
-- 🕒 **Real-time system info** (time, date, day) display
-- 🔔 **Smart reminders** via desktop notifications
-- 💾 Uses **MySQL** for lightweight persistence
-- 🎨 Terminal output with **minimal, beautiful styling**
-- 🧠 Built for developers, creators, and CLI lovers
-
+---
 
 <br/>
 
-
-##  Setup & Installation
+## ⚙️ Setup & Installation
 
 1. **Clone the Repository**
    ```bash
@@ -32,70 +17,94 @@ Designed for speed, clarity, and productivity — right from your terminal.
    ```bash
    pip install -r requirements.txt
 
-3. **Configure Environment Create a **.env** file at the root with your DB path:**
+3. **Configure Environment**  
+   Create a `.env` file at the root with your DB path:
    ```bash
    DB_PATH=taskpro.db
 
 4. **Run the Application**
    ```bash
    python3 main.py --help
-
+ 
+---
 
 <br/>
 
+## 🧾 CLI Command Flags
 
-##  Command Line Flags
+| Flag           | Description                                       |
+|----------------|---------------------------------------------------|
+| `--signup`     | Create new user account                           |
+| `--login`      | Login with credentials                            |
+| `--logout`     | Logout current user                               |
+| `-u`           | Specify username                                  |
+| `-p`           | Specify password                                  |
+| `--add`        | Add a new task                                    |
+| `--title`      | Task title                                        |
+| `--desc`       | Task description                                  |
+| `--date`       | Due date (YYYY-MM-DD)                             |
+| `--prio`       | Priority (High/Medium/Low)                        |
+| `--status`     | Task status (Pending/Completed)                   |
+| `--display`    | View all tasks                                    |
+| `--delete`     | Delete task by ID                                 |
+| `--search`     | Search tasks by keyword                           |
+| `--complete`   | Mark a task as complete (by ID)                   |
+| `--summary`    | View task stats/summary                           |
+| `--export`     | Export to PDF/CSV                                 |
+| `--notify`     | Trigger notification for due tasks                |
+| `--silent`     | Run notification silently (no console output)     |
 
-| Flags           | Description                                               |
-|-----------------|-----------------------------------------------------------|
-| `--signup`    	| Sign up a new user                                        |
-| `--login`       | Log in to Taskify                                         |
-| `--logout`      | Log out from Taskify                                      |
-| `-u`            | Specify username                                          |
-| `-p`            | Specify password                                          |
-| `--add`         | Add a new task                                            |
-| `--task`        | Title of the task                                         |
-| `--desc`        | Description of the task                                   |
-| `--date`        | Due date in YYYY-MM-DD format                             |
-| `--prio`        | Task priority (High, Medium, Low)                         |
-| `--status`      | Task status (Pending or Completed)                        |
-| `--display`     | Display all tasks                                         |
-| `--delete`      | Delete a task by its ID                                   |
-|	`--search`     | Search tasks by a keyword                                 |
-| `--complete`    | Mark a task as complete by its Task ID                    |
-| `--summary`     | View s summary of tasks                                   |
-| `--export`      | Export all tasks to csc/pdf                               |         
-| `--notify`      | Show due task notifications                               |                      
-| `--silent`      | Run notifications silently (no console output)            |
-| `--help` / `h`  | Display the help message and all available commands       |
+---
 
+<br/>
 
-<br />
-
-
-## Example usage:
+## 📦 Usage
 
 1. **login to taskify:**
    ```bash
-   $ vinz@whithat:~/Downloads/Taskify$ python3 main.py --login -u admin
+   $ python3 main.py --login -u admin
    
 2. **To add new task:**
    ```bash
-   $ vinz@whithat:~/Downloads/Taskify$ python3 main.py --add --title client1_Project --desc Handover_client1_project --date 2025-04-20 --prio High --status pending
+   $ python3 main.py --add --title client1_Project --desc Handover_client1_project --date 2025-04-20 --prio High --status pending
 
 3. **To display tasks:**
    ```bash
-   $ vinz@whithat:~/Downloads/Taskify$ python3 main.py --display
+   $ python3 main.py --display
 
 4. **To mark as completed task (using Task ID):**
    ```bash
-   $ vinz@whithat:~/Downloads/Taskify$ python3 main.py --complete 12
+   $ python3 main.py --complete 12
 
+5. **To delete a specific task:**
+   ```bash
+   $ python3 main.py --delete 12
 
-<br />
+6. **To search for task (using keyword):**
+   ```bash
+   $ python3 main.py --search client1
 
+7. **To view summary:**
+   ```bash
+   $ python3 main.py --summary
 
-##  Auto Daily Reminder (Linux Cron) (Optional)
+8. **To export task in `csv` and `pdf`**
+   ```bash
+   $ python3 main.py --export
+
+9. **To show notifications:**
+   ```bash
+   $ python3 main.py --notify
+
+10. **For silent notifications:**
+    ```bash
+    $ python3 main.py --silent
+
+---
+
+<br/>
+
+## 🔔 Auto Daily Reminder (Linux Cron) (Optional)
 
 1. **Schedule daily reminders for due tasks:**
    ```bash
@@ -105,11 +114,11 @@ Designed for speed, clarity, and productivity — right from your terminal.
    ```bash
    $ 0 9 * * * python3 /absolute/path/to/main.py --notify --silent
 
+---
 
-<br />
+<br/>
 
-   
-## Taskify Launcher (Bonus Tip) (Optional)
+##  🚀 Taskify Launcher (Bonus Tip) (Optional)
 
 1. **create a bash file **taskify.sh** and add the custom bash script as shown below:**
    ```bash
@@ -128,11 +137,40 @@ Designed for speed, clarity, and productivity — right from your terminal.
    ```bash
    $ ./taskify --login -u admin
 
+---
 
-<br />
+<br/>
+
+## ⛃ Database Schema
+
+1. **Table for storing user credits:**   
+   ```sql
+   > CREATE TABLE users (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     username VARCHAR(50) NOT NULL UNIQUE,
+     password_hash VARCHAR(255) NOT NULL,
+     approved BOOLEAN NOT NULL DEFAULT 0
+   );
+
+2. **Table for storing tasks:**
+   ```sql
+   > CREATE TABLE tasks (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     user_id INT,
+     title VARCHAR(100) NOT NULL,
+     description TEXT,
+     due_date DATE,
+     priority ENUM('Low', 'Medium', 'High') DEFAULT 'Low',
+     status ENUM('pending', 'completed') DEFAULT 'pending',
+     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+   );
+
+---
+
+<br/>
 
 
-## Folder Structure
+## 🗂️ Folder Structure
 
    ```txt
    taskify/
@@ -162,10 +200,10 @@ Designed for speed, clarity, and productivity — right from your terminal.
    └── README.md               # Project overview & run instructions
    ```
 
-<br />
+---
 
+<br/>
 
 ##  Author
 
 **Built with precision, caffeine, and ❤️ by Vinz**
-
